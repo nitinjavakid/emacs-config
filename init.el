@@ -13,6 +13,14 @@
       nil
     (package-refresh-contents))
   (package-install 'setup))
+
+(if (package-installed-p 'use-package)
+    nil
+  (if (memq 'use-package package-archive-contents)
+      nil
+    (package-refresh-contents))
+  (package-install 'use-package))
+
 (require 'setup)
 (require 'use-package)
 
@@ -31,17 +39,6 @@
 (dolist (x addons)
   (load x))
 
+(setq custom-file (concat user-emacs-directory "custom.el"))
+(load custom-file 'noerror)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(org-download org-habit-stats org gnuplot graphviz-dot-mode org-re-reveal use-package company)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
