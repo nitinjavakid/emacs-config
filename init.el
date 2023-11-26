@@ -36,6 +36,8 @@
     "setup-navigation.el"
     "setup-http-server.el"))
 
+(add-to-list 'addons "setup-markdown.el")
+
 (dolist (x addons)
   (load x))
 
