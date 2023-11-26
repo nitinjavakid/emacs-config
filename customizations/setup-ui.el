@@ -14,7 +14,7 @@
 (setq ring-bell-function 'ignore) ;; turn off audible bell
 
 ;; show full path in title bar
-(setq-default frame-title-format "%b (%f)")
+(setq-default frame-title-format "(%f)")
 
 ;; initial frame height and width
 (add-to-list 'default-frame-alist '(fullscreen . maximized))

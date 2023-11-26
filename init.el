@@ -36,6 +36,7 @@
     "setup-editing.el"
     "setup-ui.el"
     "setup-navigation.el"
+    "setup-git.el"
     "setup-http-server.el"))
 
 (unless (bound-and-true-p no-setup-markdown)
@@ -43,6 +44,9 @@
 
 (unless (bound-and-true-p no-setup-golang)
   (add-to-list 'addons "setup-golang.el"))
+
+(unless (bound-and-true-p no-setup-clojure)
+  (add-to-list 'addons "setup-clojure.el"))
 
 (dolist (x addons)
   (load x))
