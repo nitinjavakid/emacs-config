@@ -16,3 +16,4 @@ This can be used to org sync files between different remote backends.
 ```
 
 This allows you to sync files from dropbox configuration on rclone into a local directory using rclone-sync-from command. You can sync local directory to remote using rclone-sync-to command.
+

@@ -17,3 +17,7 @@ archive-contents
 recentf
 transient
 network-security.data
+session*
+.lsp*
+.dap*
+setup-flags.el

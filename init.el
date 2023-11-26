@@ -24,8 +24,10 @@
 (require 'setup)
 (require 'use-package)
 
-
 (add-to-list 'load-path "~/.emacs.d/customizations")
+
+(setq setup-flags (concat user-emacs-directory "setup-flags.el"))
+(load setup-flags 'noerror)
 
 (defvar addons
   '("setup-completion.el"
@@ -36,11 +38,14 @@
     "setup-navigation.el"
     "setup-http-server.el"))
 
-(add-to-list 'addons "setup-markdown.el")
+(unless (bound-and-true-p no-setup-markdown)
+  (add-to-list 'addons "setup-markdown.el"))
+
+(unless (bound-and-true-p no-setup-golang)
+  (add-to-list 'addons "setup-golang.el"))
 
 (dolist (x addons)
   (load x))
 
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file 'noerror)
-
