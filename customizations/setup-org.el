@@ -18,7 +18,8 @@
                         (dot . t)
                         (gnuplot . t)
                         (org . t)
-                        (python . t))))
+                        (python . t)
+                        (plantuml . t))))
 
 (use-package org
   :init

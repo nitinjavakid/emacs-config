@@ -10,7 +10,8 @@ auto-save-list
 backups
 melpa-stable
 elpa
-custom.el
+custom-pre.el
+custom-post.el
 archive-contents
 *.elc
 .cache
